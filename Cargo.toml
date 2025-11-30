@@ -1,0 +1,17 @@
+[package]
+name = "tictactoe"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = "0.17.3"
+# not use on windows 
+# bevy = { version = "0.17.3", features = ["dynamic_linking"] }
+
+[[bin]]
+name = "cli_tictactoe"
+path = "src/bin/cli_tictactoe.rs"
+
+[[bin]]
+name = "window"
+path = "src/bin/window.rs"
