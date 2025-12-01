@@ -1,8 +1,10 @@
 use bevy::prelude::*;
 
+use crate::core::board::CoreBoard;
+use crate::board::components::GameRoot;
 use crate::board::components::{BoardRoot, Cell};
 use crate::board::resources::{BoardState, CurrentPlayer, GameConfig, GameResult};
-use crate::core::board::CoreBoard;
+
 
 const CELL_SIZE: f32 = 120.0;
 const CELL_PADDING: f32 = 8.0;
@@ -22,6 +24,7 @@ pub fn reset_game_state(
     game_result.winner = None;
     game_result.is_draw = false;
 }
+
 
 pub fn setup_board(
     mut commands: Commands,

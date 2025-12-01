@@ -58,6 +58,7 @@ impl Default for LogRuntimeState {
 }
 
 /// Event that other systems can send to request a log write.
+#[derive(Event, Message, Debug, Clone)]
 pub struct LogEvent {
     pub level: LogLevel,
     pub message: String,

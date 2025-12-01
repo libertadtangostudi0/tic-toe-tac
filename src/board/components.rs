@@ -1,3 +1,4 @@
+// /src/board/components
 use bevy::prelude::*;
 use crate::board::resources::Player;
 
@@ -20,3 +21,12 @@ pub struct XSprite;
 
 #[derive(Component)]
 pub struct OSprite;
+
+#[derive(Component)]
+pub struct GameRoot;
+
+#[derive(Component)]
+pub struct CellClickIntent {
+    pub row: u8,
+    pub col: u8,
+}

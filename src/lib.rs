@@ -15,11 +15,16 @@ pub mod config;
 // FPS limiter plugin
 pub mod fps;
 
-// pub mod input;
+// system input
+pub mod input;
+
 // pub mod ui;
 // pub mod themes;
 // pub mod sounds;
 // pub mod settings;
 // pub mod localization;
-// pub mod debug_tools;
+
+// logs and debug
+pub mod debug_tools;
+
 // pub mod utils;

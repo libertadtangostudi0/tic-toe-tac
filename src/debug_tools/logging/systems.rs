@@ -1,3 +1,4 @@
+// src/debug_tools/logging/systems.rs
 use bevy::prelude::*;
 use std::fs;
 use std::fs::OpenOptions;
@@ -30,7 +31,6 @@ fn level_tag(level: LogLevel) -> &'static str {
     }
 }
 
-/// Initialize log directory. This is called once on startup.
 pub fn init_log_directory(
     mut state: ResMut<LogRuntimeState>,
     config: Res<LogConfig>,
@@ -60,7 +60,7 @@ pub fn init_log_directory(
 pub fn flush_log_buffer(
     config: Res<LogConfig>,
     state: Res<LogRuntimeState>,
-    mut events: EventReader<LogEvent>,
+    mut events: MessageReader<LogEvent>,
 ) {
     if !config.enabled || !state.initialized {
         for _ in events.read() {
